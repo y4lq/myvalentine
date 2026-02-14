@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine’s Day!</title>
+<style>
+  body {
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #ffc1cc, #ffe0e6);
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    color:#fff;
+  }
+  h1 {
+    font-size:3em;
+    margin-bottom:0.5em;
+    text-shadow: 2px 2px #ff6b81;
+  }
+  p {
+    font-size:1.5em;
+    max-width:600px;
+    margin:0.5em auto;
+    text-shadow: 1px 1px #ff6b81;
+  }
+  .heart {
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:red;
+    transform:rotate(45deg);
+    animation: float 7s infinite;
+  }
+  .heart:after, .heart:before {
+    content:"";
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:red;
+    border-radius:50%;
+  }
+  .heart:before { top:-10px; left:0; }
+  .heart:after { left:10px; top:0; }
+  @keyframes float {
+    0% { transform:translateY(0) rotate(45deg); opacity:1; }
+    100% { transform:translateY(-1000px) rotate(45deg); opacity:0; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Happy Valentine’s Day, [NILAYYY]! 💖</h1>
+<p>[I’m so grateful to have you in my life. I honestly can’t imagine my life without you! I lavvvvv you so much. You’re the best girl ever, and I feel so happy every time we talk. I hope I get to spend every Valentine’s Day with you for the next 100 years!]</p>
+<p>From, [Essi] 💌</p>
+
+<script>
+  // Generate hearts
+  for(let i=0;i<40;i++){
+    let heart=document.createElement('div');
+    heart.className='heart';
+    heart.style.left=Math.random()*100+'vw';
+    heart.style.animationDuration=5+Math.random()*5+'s';
+    heart.style.width=15+Math.random()*20+'px';
+    heart.style.height=15+Math.random()*20+'px';
+    document.body.appendChild(heart);
+  }
+</script>
+
+</body>
+</html>
